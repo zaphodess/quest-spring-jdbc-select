@@ -6,6 +6,10 @@ import java.util.List;
 
 public class SchoolRepository {
 
+    private final static String DB_URL = "jdbc:mysql://localhost:3306/spring_jdbc_select?serverTimezone=GMT";
+    private final static String DB_USER = "h4rryp0tt3r";
+    private final static String DB_PASSWORD = "Horcrux4life!";
+
     public List<School> findAll() {
 
         // TODO : find all schools
@@ -15,6 +19,12 @@ public class SchoolRepository {
     public School findById(Long id) {
 
         // TODO : find a school by id
+        return null;
+    }
+
+    public School findByCountry(String country) {
+
+        // TODO : search schools by country
         return null;
     }
 }

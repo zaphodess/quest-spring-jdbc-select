@@ -4,6 +4,7 @@ import com.wildcodeschool.wildandwizard.repository.WizardRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -20,10 +21,18 @@ public class WizardController {
     }
 
     @GetMapping("/wizard")
-    public String getById(Model model, @RequestParam Long id) {
+    public String getById(Model model, @PathVariable Long id) {
 
         model.addAttribute("wizard", repository.findById(id));
 
         return "wizard_get";
+    }
+
+    @GetMapping("/wizards/search")
+    public String getByLastName(Model model, @RequestParam String lastName) {
+
+        model.addAttribute("wizards", repository.findByLastName(lastName));
+
+        return "wizard_get_all";
     }
 }

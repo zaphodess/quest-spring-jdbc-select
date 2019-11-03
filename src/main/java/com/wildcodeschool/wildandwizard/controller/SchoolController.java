@@ -26,4 +26,12 @@ public class SchoolController {
 
         return "school_get";
     }
+
+    @GetMapping("/schools/search")
+    public String getByCountry(Model model, @RequestParam String country) {
+
+        model.addAttribute("schools", repository.findByCountry(country));
+
+        return "school_get_all";
+    }
 }

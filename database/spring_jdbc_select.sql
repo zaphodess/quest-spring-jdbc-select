@@ -1,5 +1,5 @@
 CREATE DATABASE  IF NOT EXISTS `spring_jdbc_select` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `spring_jdbc_quest`;
+USE `spring_jdbc_select`;
 -- MySQL dump 10.13  Distrib 5.7.25, for Linux (x86_64)
 --
 -- Host: localhost    Database: spring_jdbc_select

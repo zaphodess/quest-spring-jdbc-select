@@ -6,11 +6,25 @@
 </head>
 <body>
 <h1>Wild And Wizard</h1>
-<h3>Search Wizards:</h3>
-<form action="/wizards" method="get">
-    <label>Enter a family name (leave blank to see all results):</label>
-    <input name="family" placeholder="Potter" type="text">
-    <input type="submit" value="Send">
-</form>
+<section>
+    <h3>Search Wizards:</h3>
+    <a href="/wizards">Get all wizards</a>
+    <br><br>
+    <form action="/wizard" method="get">
+        <label>Search by id:</label>
+        <input name="id" placeholder="1" type="text" required>
+        <input type="submit" value="Send">
+    </form>
+</section>
+<section>
+    <h3>Search School:</h3>
+    <a href="/schools">Get all schools</a>
+    <br><br>
+    <form action="/school" method="get">
+        <label>Search by id:</label>
+        <input name="id" placeholder="1" type="text" required>
+        <input type="submit" value="Send">
+    </form>
+</section>
 </body>
 </html>

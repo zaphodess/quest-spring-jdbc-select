@@ -36,8 +36,7 @@ public class WizardRepository {
                 wizards.add(new Wizard(id, firstName, lastName, birthday, birthPlace, biography, muggle));
             }
             return wizards;
-        } catch (
-                SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
@@ -64,8 +63,7 @@ public class WizardRepository {
                 boolean muggle = resultSet.getBoolean("is_muggle");
                 return new Wizard(id, firstName, lastName, birthday, birthPlace, biography, muggle);
             }
-        } catch (
-                SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
@@ -95,8 +93,7 @@ public class WizardRepository {
                 wizards.add(new Wizard(id, firstName, lastName, birthday, birthPlace, biography, muggle));
             }
             return wizards;
-        } catch (
-                SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;

@@ -4,7 +4,6 @@ import com.wildcodeschool.wildandwizard.repository.WizardRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -21,7 +20,7 @@ public class WizardController {
     }
 
     @GetMapping("/wizard")
-    public String getById(Model model, @PathVariable Long id) {
+    public String getById(Model model, @RequestParam Long id) {
 
         model.addAttribute("wizard", repository.findById(id));
 

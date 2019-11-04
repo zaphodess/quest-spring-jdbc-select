@@ -22,7 +22,7 @@ public class SchoolRepository {
         return null;
     }
 
-    public School findByCountry(String country) {
+    public List<School> findByCountry(String country) {
 
         // TODO : search schools by country
         return null;
